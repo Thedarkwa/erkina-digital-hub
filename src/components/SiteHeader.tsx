@@ -66,8 +66,11 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-background">
-          <nav className="flex flex-col p-4 gap-1">
+        <div className="xl:hidden border-t border-border bg-background">
+          <div className="p-4 md:hidden">
+            <SearchBar onNavigate={() => setOpen(false)} />
+          </div>
+          <nav className="flex flex-col px-4 pb-4 gap-1">
             {nav.map((n) => (
               <Link
                 key={n.to}
