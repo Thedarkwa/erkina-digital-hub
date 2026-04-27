@@ -57,19 +57,17 @@ function HomePage() {
               A trusted multi-business enterprise delivering quality products, reliable service, and exceptional support across Ghana.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="https://wa.me/233000000000"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.03]"
-              >
-                <MessageCircle className="h-4 w-4" /> Chat on WhatsApp
-              </a>
               <Link
                 to="/real-estate"
-                className="inline-flex items-center gap-2 rounded-md border border-navy-foreground/30 bg-navy-foreground/5 px-7 py-3.5 text-sm font-semibold text-navy-foreground backdrop-blur transition-colors hover:bg-navy-foreground/10"
+                className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-7 py-3.5 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.03]"
               >
                 Explore Divisions <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-md border border-navy-foreground/30 bg-navy-foreground/5 px-7 py-3.5 text-sm font-semibold text-navy-foreground backdrop-blur transition-colors hover:bg-navy-foreground/10"
+              >
+                Contact Us <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>
