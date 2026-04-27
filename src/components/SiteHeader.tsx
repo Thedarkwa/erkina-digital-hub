@@ -57,7 +57,7 @@ export function SiteHeader() {
           </a>
         </div>
         <button
-          className="lg:hidden p-2"
+          className="xl:hidden p-2"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
