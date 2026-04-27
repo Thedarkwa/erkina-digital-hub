@@ -9,8 +9,50 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TissueRouteImport } from './routes/tissue'
+import { Route as SoapRouteImport } from './routes/soap'
+import { Route as RealEstateRouteImport } from './routes/real-estate'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as ElectronicsRouteImport } from './routes/electronics'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TissueRoute = TissueRouteImport.update({
+  id: '/tissue',
+  path: '/tissue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoapRoute = SoapRouteImport.update({
+  id: '/soap',
+  path: '/soap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealEstateRoute = RealEstateRouteImport.update({
+  id: '/real-estate',
+  path: '/real-estate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ElectronicsRoute = ElectronicsRouteImport.update({
+  id: '/electronics',
+  path: '/electronics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +61,130 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/electronics': typeof ElectronicsRoute
+  '/events': typeof EventsRoute
+  '/real-estate': typeof RealEstateRoute
+  '/soap': typeof SoapRoute
+  '/tissue': typeof TissueRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/electronics': typeof ElectronicsRoute
+  '/events': typeof EventsRoute
+  '/real-estate': typeof RealEstateRoute
+  '/soap': typeof SoapRoute
+  '/tissue': typeof TissueRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/electronics': typeof ElectronicsRoute
+  '/events': typeof EventsRoute
+  '/real-estate': typeof RealEstateRoute
+  '/soap': typeof SoapRoute
+  '/tissue': typeof TissueRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/electronics'
+    | '/events'
+    | '/real-estate'
+    | '/soap'
+    | '/tissue'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/electronics'
+    | '/events'
+    | '/real-estate'
+    | '/soap'
+    | '/tissue'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/electronics'
+    | '/events'
+    | '/real-estate'
+    | '/soap'
+    | '/tissue'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  ElectronicsRoute: typeof ElectronicsRoute
+  EventsRoute: typeof EventsRoute
+  RealEstateRoute: typeof RealEstateRoute
+  SoapRoute: typeof SoapRoute
+  TissueRoute: typeof TissueRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/tissue': {
+      id: '/tissue'
+      path: '/tissue'
+      fullPath: '/tissue'
+      preLoaderRoute: typeof TissueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/soap': {
+      id: '/soap'
+      path: '/soap'
+      fullPath: '/soap'
+      preLoaderRoute: typeof SoapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/real-estate': {
+      id: '/real-estate'
+      path: '/real-estate'
+      fullPath: '/real-estate'
+      preLoaderRoute: typeof RealEstateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/electronics': {
+      id: '/electronics'
+      path: '/electronics'
+      fullPath: '/electronics'
+      preLoaderRoute: typeof ElectronicsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +197,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  ElectronicsRoute: ElectronicsRoute,
+  EventsRoute: EventsRoute,
+  RealEstateRoute: RealEstateRoute,
+  SoapRoute: SoapRoute,
+  TissueRoute: TissueRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
