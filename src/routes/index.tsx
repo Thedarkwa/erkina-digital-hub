@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle, Cpu, FlaskConical, Building2, Scroll, PartyPopper, ShieldCheck, Truck, Award } from "lucide-react";
+import { ArrowRight, MessageCircle, Cpu, FlaskConical, Building2, Scroll, PartyPopper, ShieldCheck, Truck, Award, Headphones } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { ProductCard } from "@/components/ProductCard";
 import heroImg from "@/assets/hero-erkina.jpg";
