@@ -1,15 +1,16 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { SearchBar } from "./SearchBar";
+import { catalog } from "@/lib/catalog";
 
 const nav = [
   { to: "/", label: "Home" },
-  { to: "/electronics", label: "Electronics" },
-  { to: "/soap", label: "Soap & Cleaning" },
-  { to: "/real-estate", label: "Real Estate" },
-  { to: "/tissue", label: "Tissue & Paper" },
-  { to: "/events", label: "Event Rentals" },
+  { to: "/electronics", label: "Electronics", category: "Electronics" as const },
+  { to: "/soap", label: "Soap & Cleaning", category: "Soap & Cleaning" as const },
+  { to: "/real-estate", label: "Real Estate", category: "Real Estate" as const },
+  { to: "/tissue", label: "Tissue & Paper", category: "Tissue & Paper" as const },
+  { to: "/events", label: "Event Rentals", category: "Event Rentals" as const },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -32,17 +33,54 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden xl:flex items-center gap-1">
-          {nav.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              className="px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
-              activeProps={{ className: "px-3 py-2 text-sm font-semibold text-navy" }}
-              activeOptions={{ exact: n.to === "/" }}
-            >
-              {n.label}
-            </Link>
-          ))}
+          {nav.map((n) => {
+            const items = "category" in n ? catalog.filter((c) => c.category === n.category) : [];
+            const hasMenu = items.length > 0;
+            return (
+              <div key={n.to} className="group relative">
+                <Link
+                  to={n.to}
+                  className="inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-foreground/80 transition-colors hover:text-foreground"
+                  activeProps={{ className: "inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold text-navy" }}
+                  activeOptions={{ exact: n.to === "/" }}
+                >
+                  {n.label}
+                  {hasMenu && <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" />}
+                </Link>
+                {hasMenu && (
+                  <div className="invisible absolute left-1/2 top-full z-50 w-72 -translate-x-1/2 pt-2 opacity-0 transition-all duration-150 group-hover:visible group-hover:opacity-100">
+                    <div className="overflow-hidden rounded-lg border border-border bg-popover shadow-elegant">
+                      <div className="border-b border-border px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">
+                        {n.label}
+                      </div>
+                      <ul className="max-h-96 overflow-auto py-1">
+                        {items.map((it) => (
+                          <li key={it.id}>
+                            <Link
+                              to={n.to}
+                              className="flex items-center gap-3 px-3 py-2 hover:bg-muted"
+                            >
+                              <img src={it.image} alt="" className="h-9 w-9 shrink-0 rounded object-cover" />
+                              <div className="min-w-0 flex-1">
+                                <div className="truncate text-sm font-medium">{it.name}</div>
+                                <div className="truncate text-xs text-muted-foreground">{it.price}</div>
+                              </div>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                      <Link
+                        to={n.to}
+                        className="block border-t border-border px-4 py-2 text-xs font-semibold uppercase tracking-wider text-navy hover:bg-muted hover:text-gold"
+                      >
+                        View all {n.label.toLowerCase()} →
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         <div className="hidden md:flex flex-1 justify-end items-center gap-3 pl-6">
