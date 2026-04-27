@@ -78,7 +78,7 @@ function HomePage() {
               { icon: ShieldCheck, label: "Trusted since 2019" },
               { icon: Truck, label: "Nationwide delivery" },
               { icon: Award, label: "Quality assured" },
-              { icon: MessageCircle, label: "Direct WhatsApp" },
+              { icon: Headphones, label: "Dedicated support" },
             ].map((t) => (
               <div key={t.label} className="flex items-center gap-3 text-sm text-navy-foreground/80">
                 <t.icon className="h-5 w-5 text-gold" />
