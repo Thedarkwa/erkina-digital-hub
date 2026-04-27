@@ -76,7 +76,7 @@
   --input: oklch(0.92 0.01 260);
   --ring: oklch(0.78 0.14 85);
 
-  --gradient-hero: linear-gradient(135deg, oklch(0.27 0.08 260) 0%, oklch(0.18 0.05 260) 100%);
+  --gradient-hero: oklch(0.27 0.08 260);
   --gradient-gold: linear-gradient(135deg, oklch(0.82 0.14 85) 0%, oklch(0.7 0.14 70) 100%);
   --shadow-elegant: 0 10px 40px -10px oklch(0.27 0.08 260 / 0.25);
   --shadow-gold: 0 8px 30px -8px oklch(0.78 0.14 85 / 0.4);
