@@ -31,7 +31,7 @@ export function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {nav.map((n) => (
             <Link
               key={n.to}
@@ -45,15 +45,17 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a
-          href="https://wa.me/233000000000"
-          target="_blank"
-          rel="noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 rounded-md bg-gradient-gold px-4 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.02]"
-        >
-          Chat on WhatsApp
-        </a>
-
+        <div className="hidden md:flex flex-1 justify-end items-center gap-3 pl-6">
+          <SearchBar />
+          <a
+            href="https://wa.me/233000000000"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden lg:inline-flex shrink-0 items-center gap-2 rounded-md bg-gradient-gold px-4 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.02]"
+          >
+            WhatsApp
+          </a>
+        </div>
         <button
           className="lg:hidden p-2"
           onClick={() => setOpen((v) => !v)}
