@@ -12,9 +12,9 @@ const searchSchema = z.object({
 
 export const Route = createFileRoute("/search")({
   validateSearch: zodValidator(searchSchema),
-  head: ({ search }) => ({
+  head: () => ({
     meta: [
-      { title: search.q ? `Search: ${search.q} — ERKINA` : "Search — ERKINA Trading & Events" },
+      { title: "Search — ERKINA Trading & Events" },
       { name: "description", content: "Search products and services across ERKINA Trading & Events." },
     ],
   }),
