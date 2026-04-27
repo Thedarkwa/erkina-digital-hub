@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TissueRouteImport } from './routes/tissue'
 import { Route as SoapRouteImport } from './routes/soap'
+import { Route as SearchRouteImport } from './routes/search'
 import { Route as RealEstateRouteImport } from './routes/real-estate'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as ElectronicsRouteImport } from './routes/electronics'
@@ -26,6 +27,11 @@ const TissueRoute = TissueRouteImport.update({
 const SoapRoute = SoapRouteImport.update({
   id: '/soap',
   path: '/soap',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RealEstateRoute = RealEstateRouteImport.update({
@@ -66,6 +72,7 @@ export interface FileRoutesByFullPath {
   '/electronics': typeof ElectronicsRoute
   '/events': typeof EventsRoute
   '/real-estate': typeof RealEstateRoute
+  '/search': typeof SearchRoute
   '/soap': typeof SoapRoute
   '/tissue': typeof TissueRoute
 }
@@ -76,6 +83,7 @@ export interface FileRoutesByTo {
   '/electronics': typeof ElectronicsRoute
   '/events': typeof EventsRoute
   '/real-estate': typeof RealEstateRoute
+  '/search': typeof SearchRoute
   '/soap': typeof SoapRoute
   '/tissue': typeof TissueRoute
 }
@@ -87,6 +95,7 @@ export interface FileRoutesById {
   '/electronics': typeof ElectronicsRoute
   '/events': typeof EventsRoute
   '/real-estate': typeof RealEstateRoute
+  '/search': typeof SearchRoute
   '/soap': typeof SoapRoute
   '/tissue': typeof TissueRoute
 }
@@ -99,6 +108,7 @@ export interface FileRouteTypes {
     | '/electronics'
     | '/events'
     | '/real-estate'
+    | '/search'
     | '/soap'
     | '/tissue'
   fileRoutesByTo: FileRoutesByTo
@@ -109,6 +119,7 @@ export interface FileRouteTypes {
     | '/electronics'
     | '/events'
     | '/real-estate'
+    | '/search'
     | '/soap'
     | '/tissue'
   id:
@@ -119,6 +130,7 @@ export interface FileRouteTypes {
     | '/electronics'
     | '/events'
     | '/real-estate'
+    | '/search'
     | '/soap'
     | '/tissue'
   fileRoutesById: FileRoutesById
@@ -130,6 +142,7 @@ export interface RootRouteChildren {
   ElectronicsRoute: typeof ElectronicsRoute
   EventsRoute: typeof EventsRoute
   RealEstateRoute: typeof RealEstateRoute
+  SearchRoute: typeof SearchRoute
   SoapRoute: typeof SoapRoute
   TissueRoute: typeof TissueRoute
 }
@@ -148,6 +161,13 @@ declare module '@tanstack/react-router' {
       path: '/soap'
       fullPath: '/soap'
       preLoaderRoute: typeof SoapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/real-estate': {
@@ -202,6 +222,7 @@ const rootRouteChildren: RootRouteChildren = {
   ElectronicsRoute: ElectronicsRoute,
   EventsRoute: EventsRoute,
   RealEstateRoute: RealEstateRoute,
+  SearchRoute: SearchRoute,
   SoapRoute: SoapRoute,
   TissueRoute: TissueRoute,
 }
