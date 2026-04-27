@@ -1,4 +1,5 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
+import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } from "@tanstack/react-router";
+import { RouteTransitionLoader } from "@/components/RouteTransitionLoader";
 
 import appCss from "../styles.css?url";
 
@@ -71,5 +72,13 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
-  return <Outlet />;
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  return (
+    <>
+      <RouteTransitionLoader />
+      <div key={pathname} className="animate-fade-in">
+        <Outlet />
+      </div>
+    </>
+  );
 }
