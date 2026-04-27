@@ -40,9 +40,9 @@ export function SiteFooter() {
             Contact
           </h4>
           <ul className="mt-4 space-y-3 text-sm text-navy-foreground/80">
-            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> Tema Community One Main Station</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> +233 00 000 0000</li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-gold" /> erkinatradingevents@gmail.com</li>
+            <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>Tema Community One Main Station</span></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>+233 00 000 0000</span></li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>erkinatradingevents@gmail.com</span></li>
           </ul>
         </div>
 
