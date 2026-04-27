@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { SearchBar } from "./SearchBar";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -30,7 +31,7 @@ export function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1">
           {nav.map((n) => (
             <Link
               key={n.to}
@@ -44,17 +45,19 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a
-          href="https://wa.me/233000000000"
-          target="_blank"
-          rel="noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 rounded-md bg-gradient-gold px-4 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.02]"
-        >
-          Chat on WhatsApp
-        </a>
-
+        <div className="hidden md:flex flex-1 justify-end items-center gap-3 pl-6">
+          <SearchBar />
+          <a
+            href="https://wa.me/233000000000"
+            target="_blank"
+            rel="noreferrer"
+            className="hidden lg:inline-flex shrink-0 items-center gap-2 rounded-md bg-gradient-gold px-4 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.02]"
+          >
+            WhatsApp
+          </a>
+        </div>
         <button
-          className="lg:hidden p-2"
+          className="xl:hidden p-2"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -63,8 +66,11 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="lg:hidden border-t border-border bg-background">
-          <nav className="flex flex-col p-4 gap-1">
+        <div className="xl:hidden border-t border-border bg-background">
+          <div className="p-4 md:hidden">
+            <SearchBar onNavigate={() => setOpen(false)} />
+          </div>
+          <nav className="flex flex-col px-4 pb-4 gap-1">
             {nav.map((n) => (
               <Link
                 key={n.to}
