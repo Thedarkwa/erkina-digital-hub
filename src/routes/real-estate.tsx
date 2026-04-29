@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import { MapPin, Ruler, FileCheck, MessageCircle, Quote } from "lucide-react";
+import { MapPin, Ruler, FileCheck, Quote } from "lucide-react";
 import realEstateImg from "@/assets/real-estate.jpg";
 
 export const Route = createFileRoute("/real-estate")({
@@ -51,7 +51,7 @@ function RealEstatePage() {
                   <li className="col-span-2 flex items-start gap-2"><FileCheck className="h-4 w-4 mt-0.5 text-gold shrink-0" /> {l.docs}</li>
                 </ul>
                 <a href="https://wa.me/233000000000" className="mt-5 inline-flex items-center gap-2 rounded-md bg-navy px-4 py-2.5 text-sm font-semibold text-navy-foreground hover:bg-navy/90">
-                  <MessageCircle className="h-4 w-4" /> Inquire on WhatsApp
+                  Inquire on WhatsApp
                 </a>
               </div>
             </article>
