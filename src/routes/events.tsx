@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import { Check, MessageCircle } from "lucide-react";
+import { Check } from "lucide-react";
 import eventsImg from "@/assets/events.jpg";
+import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 export const Route = createFileRoute("/events")({
   head: () => ({
@@ -98,7 +99,7 @@ function EventsPage() {
                       : "bg-navy text-navy-foreground hover:bg-navy/90"
                   }`}
                 >
-                  <MessageCircle className="h-4 w-4" /> Book on WhatsApp
+                  <img src={whatsappIcon} alt="" className="h-5 w-5 object-contain" /> Book on WhatsApp
                 </a>
               </div>
             ))}
