@@ -164,7 +164,7 @@ function HomePage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-4 lg:justify-end">
-              <a href="https://wa.me/233000000000" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-6 py-3 text-sm font-semibold text-gold-foreground shadow-gold">
+              <a href="https://wa.me/233559890111" className="inline-flex items-center gap-2 rounded-md bg-gradient-gold px-6 py-3 text-sm font-semibold text-gold-foreground shadow-gold">
                 WhatsApp Us
               </a>
               <Link to="/contact" className="inline-flex items-center gap-2 rounded-md border border-navy-foreground/30 px-6 py-3 text-sm font-semibold">

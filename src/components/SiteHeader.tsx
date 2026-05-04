@@ -86,7 +86,7 @@ export function SiteHeader() {
         <div className="hidden md:flex flex-1 justify-end items-center gap-3 pl-6">
           <SearchBar />
           <a
-            href="https://wa.me/233000000000"
+            href="https://wa.me/233559890111"
             target="_blank"
             rel="noreferrer"
             className="hidden lg:inline-flex shrink-0 items-center gap-2 rounded-md bg-gradient-gold px-4 py-2 text-sm font-semibold text-gold-foreground shadow-gold transition-transform hover:scale-[1.02]"
@@ -120,7 +120,7 @@ export function SiteHeader() {
               </Link>
             ))}
             <a
-              href="https://wa.me/233000000000"
+              href="https://wa.me/233559890111"
               className="mt-2 rounded-md bg-gradient-gold px-4 py-2 text-center text-sm font-semibold text-gold-foreground"
             >
               Chat on WhatsApp

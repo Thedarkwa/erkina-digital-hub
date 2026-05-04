@@ -91,7 +91,7 @@ function EventsPage() {
                   ))}
                 </ul>
                 <a
-                  href="https://wa.me/233000000000"
+                  href="https://wa.me/233559890111"
                   className={`mt-8 inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold ${
                     p.accent
                       ? "bg-gradient-gold text-gold-foreground shadow-gold"
