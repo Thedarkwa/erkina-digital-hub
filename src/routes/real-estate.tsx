@@ -50,7 +50,7 @@ function RealEstatePage() {
                   <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> {l.location}</li>
                   <li className="col-span-2 flex items-start gap-2"><FileCheck className="h-4 w-4 mt-0.5 text-gold shrink-0" /> {l.docs}</li>
                 </ul>
-                <a href="https://wa.me/233000000000" className="mt-5 inline-flex items-center gap-2 rounded-md bg-navy px-4 py-2.5 text-sm font-semibold text-navy-foreground hover:bg-navy/90">
+                <a href="https://wa.me/233559890111" className="mt-5 inline-flex items-center gap-2 rounded-md bg-navy px-4 py-2.5 text-sm font-semibold text-navy-foreground hover:bg-navy/90">
                   Inquire on WhatsApp
                 </a>
               </div>

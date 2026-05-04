@@ -3,7 +3,7 @@ import whatsappIcon from "@/assets/whatsapp-icon.png";
 export function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/233000000000"
+      href="https://wa.me/233559890111"
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"

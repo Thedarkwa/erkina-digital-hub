@@ -25,8 +25,8 @@ function ContactPage() {
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {[
-            { icon: MessageCircle, label: "WhatsApp", value: "+233 00 000 0000", href: "https://wa.me/233000000000", primary: true },
-            { icon: Phone, label: "Call us", value: "+233 00 000 0000", href: "tel:+233000000000" },
+            { icon: MessageCircle, label: "WhatsApp", value: "+233 55 989 0111", href: "https://wa.me/233559890111", primary: true },
+            { icon: Phone, label: "Call us", value: "+233 55 989 0111", href: "tel:+233559890111" },
             { icon: Mail, label: "Email", value: "erkinatradingevents@gmail.com", href: "mailto:erkinatradingevents@gmail.com" },
             { icon: MapPin, label: "Visit", value: "Tema Community One Main Station", href: "#map" },
           ].map((c) => (
