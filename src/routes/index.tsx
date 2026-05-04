@@ -146,7 +146,7 @@ function HomePage() {
             <ProductCard name="Bluetooth Speaker" price="GHS 850" specs="Heavy bass, 12hr battery" image={electronicsImg} />
             <ProductCard name="SLES 70%" price="Request price" specs="25kg drum, surfactant" image={soapImg} />
             <ProductCard name="Premium Toilet Roll" price="Wholesale only" specs="2-ply, 24 rolls/case" image={tissueImg} />
-            <ProductCard name="Gold Event Package" price="From GHS 9,500" specs="Canopy, sound, mist fan" image={eventsImg} cta="Book on WhatsApp" />
+            <ProductCard name="Bronze Event Package" price="From GHS 3,500" specs="Canopy, sound, 50 chairs" image={eventsImg} cta="Book on WhatsApp" />
           </div>
         </div>
       </section>
