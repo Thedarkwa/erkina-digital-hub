@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
-import { Target, MapPin, Calendar } from "lucide-react";
+import { Target, MapPin, Calendar, Eye } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -28,6 +28,14 @@ function AboutPage() {
           <h2 className="mt-4 font-display text-2xl font-bold">Our Mission</h2>
           <p className="mt-4 text-lg text-muted-foreground italic">
             "To serve individuals and businesses with reliable trading solutions and event services by offering quality products, timely delivery, and exceptional customer support."
+          </p>
+        </div>
+
+        <div className="mt-8 rounded-2xl border-l-4 border-gold bg-card p-8 shadow-card lg:p-10">
+          <Eye className="h-8 w-8 text-gold" />
+          <h2 className="mt-4 font-display text-2xl font-bold">Our Vision</h2>
+          <p className="mt-4 text-lg text-muted-foreground italic">
+            "To become a leading and trusted multi-sector company, delivering excellence in trading, event management and real estate. Erkina Trading and Events envisions building a dynamic brand that connects people, opportunities and experiences through quality products, exceptional events and innovative property solutions. Through integrity, professionalism and innovation, Erkina Trading aims to be a recognized name that drives economic empowerment, builds lasting relationships and transforms ideas into reality."
           </p>
         </div>
 
