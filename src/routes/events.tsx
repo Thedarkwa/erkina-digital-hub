@@ -24,19 +24,19 @@ const packages = [
   {
     name: "Bronze",
     price: "GHS 3,500",
-    items: ["1 Canopy (10x20 ft)", "30 Chairs", "5 Tables", "Basic sound system", "Setup included"],
+    items: ["1 Canopy (10x20 ft)", "50 Chairs", "5 Tables", "Basic sound system", "Setup included"],
     accent: false,
   },
   {
     name: "Silver",
-    price: "GHS 6,500",
-    items: ["2 Canopies", "60 Chairs", "10 Tables", "Premium sound", "2 Mist fans", "Decoration"],
+    price: "GHS 7,000",
+    items: ["2 Canopies", "100 Chairs", "10 Tables", "Premium sound", "2 Mist fans", "Decoration"],
     accent: true,
   },
   {
     name: "Gold",
-    price: "GHS 9,500",
-    items: ["3 Canopies", "100 Chairs", "15 Tables", "Pro sound + DJ", "Outdoor AC + mist fans", "Full decoration"],
+    price: "GHS 10,000",
+    items: ["3 Canopies", "200 Chairs", "15 Tables", "Pro sound + DJ", "Outdoor AC + mist fans", "Full decoration"],
     accent: false,
   },
 ];
