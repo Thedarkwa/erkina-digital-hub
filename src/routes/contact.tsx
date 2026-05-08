@@ -47,13 +47,24 @@ function ContactPage() {
         </div>
 
         <div className="mt-12 grid gap-8 lg:grid-cols-2">
-          <form className="rounded-2xl border border-border bg-card p-8 shadow-card">
+          <form
+            className="rounded-2xl border border-border bg-card p-8 shadow-card"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget as HTMLFormElement;
+              const name = (form.elements.namedItem("name") as HTMLInputElement)?.value.trim();
+              const contact = (form.elements.namedItem("contact") as HTMLInputElement)?.value.trim();
+              const message = (form.elements.namedItem("message") as HTMLTextAreaElement)?.value.trim();
+              const text = `Hello ERKINA,%0A%0AName: ${encodeURIComponent(name || "")}%0AContact: ${encodeURIComponent(contact || "")}%0A%0A${encodeURIComponent(message || "")}`;
+              window.open(`https://wa.me/233559890111?text=${text}`, "_blank");
+            }}
+          >
             <h2 className="font-display text-2xl font-bold">Send us a message</h2>
             <div className="mt-6 grid gap-4">
-              <input className="rounded-md border border-input bg-background px-4 py-2.5 text-sm" placeholder="Full name" />
-              <input className="rounded-md border border-input bg-background px-4 py-2.5 text-sm" placeholder="Email or phone" />
-              <textarea rows={5} className="rounded-md border border-input bg-background px-4 py-2.5 text-sm" placeholder="How can we help?" />
-              <button type="button" className="rounded-md bg-navy px-6 py-3 text-sm font-semibold text-navy-foreground hover:bg-navy/90">
+              <input name="name" className="rounded-md border border-input bg-background px-4 py-2.5 text-sm" placeholder="Full name" />
+              <input name="contact" className="rounded-md border border-input bg-background px-4 py-2.5 text-sm" placeholder="Email or phone" />
+              <textarea name="message" rows={5} className="rounded-md border border-input bg-background px-4 py-2.5 text-sm" placeholder="How can we help?" />
+              <button type="submit" className="rounded-md bg-navy px-6 py-3 text-sm font-semibold text-navy-foreground hover:bg-navy/90">
                 Send Message
               </button>
             </div>
