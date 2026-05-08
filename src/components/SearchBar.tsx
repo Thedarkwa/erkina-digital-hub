@@ -30,7 +30,7 @@ export function SearchBar({ onNavigate }: { onNavigate?: () => void }) {
   }
 
   return (
-    <div ref={wrapRef} className="relative w-full max-w-md">
+    <div ref={wrapRef} className="relative w-full max-w-xl">
       <form onSubmit={submit} className="relative">
         <SearchIcon className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <input
