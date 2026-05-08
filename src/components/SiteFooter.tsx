@@ -42,7 +42,7 @@ export function SiteFooter() {
           <ul className="mt-4 space-y-3 text-sm text-navy-foreground/80">
             <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>Tema Community One Main Station</span></li>
             <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>+233 55 989 0111</span></li>
-            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>erkinatradingevents@gmail.com</span></li>
+            <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0 text-gold" /><span>info@erkinatrading.com</span></li>
           </ul>
         </div>
 

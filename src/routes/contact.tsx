@@ -27,7 +27,7 @@ function ContactPage() {
           {[
             { icon: MessageCircle, label: "WhatsApp", value: "+233 55 989 0111", href: "https://wa.me/233559890111", primary: true },
             { icon: Phone, label: "Call us", value: "+233 55 989 0111", href: "tel:+233559890111" },
-            { icon: Mail, label: "Email", value: "erkinatradingevents@gmail.com", href: "mailto:erkinatradingevents@gmail.com" },
+            { icon: Mail, label: "Email", value: "info@erkinatrading.com", href: "mailto:info@erkinatrading.com" },
             { icon: MapPin, label: "Visit", value: "Tema Community One Main Station", href: "#map" },
           ].map((c) => (
             <a
