@@ -31,7 +31,7 @@ export function SiteFooter() {
             <li><Link to="/soap" className="hover:text-gold">Soap & Cleaning Materials</Link></li>
             <li><Link to="/real-estate" className="hover:text-gold">Real Estate</Link></li>
             <li><Link to="/tissue" className="hover:text-gold">Tissue & Paper</Link></li>
-            <li><Link to="/events" className="hover:text-gold">Event Rentals</Link></li>
+            
           </ul>
         </div>
 
