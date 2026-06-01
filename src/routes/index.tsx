@@ -26,7 +26,7 @@ const categories = [
   { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: soapImg },
   { to: "/real-estate", title: "Real Estate", desc: "Lands, property management", icon: Building2, image: realEstateImg },
   { to: "/tissue", title: "Tissue & Paper Products", desc: "Toilet rolls & wholesale supply", icon: Scroll, image: tissueImg },
-  { to: "/events", title: "Event Rentals", desc: "Canopies, sound, mist fans", icon: PartyPopper, image: eventsImg },
+  
 ] as const;
 
 function HomePage() {
