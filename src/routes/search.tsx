@@ -50,7 +50,7 @@ function SearchPage() {
               Try a different keyword or browse a division directly.
             </p>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
-              {["/electronics", "/soap", "/tissue", "/real-estate", "/events"].map((r) => (
+              {["/electronics", "/soap", "/tissue", "/real-estate"].map((r) => (
                 <Link
                   key={r}
                   to={r}
