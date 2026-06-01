@@ -95,7 +95,7 @@ function HomePage() {
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.25em] text-gold">Our Divisions</div>
             <h2 className="mt-3 font-display text-3xl font-bold text-balance sm:text-4xl">
-              Five businesses. One trusted partner.
+              Four businesses. One trusted partner.
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
