@@ -55,7 +55,7 @@ function AboutPage() {
         <div className="mt-12 prose prose-neutral max-w-none">
           <h2 className="font-display text-2xl font-bold">What we do</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            ERKINA Trading & Events is a Ghanaian multi-business enterprise. Our five divisions — Electronics, Soap & Cleaning Materials, Real Estate, Tissue Manufacturing, and Event Rentals — work together to serve a broad customer base of retail buyers, businesses, distributors, and event clients.
+            ERKINA Trading & Events is a Ghanaian multi-business enterprise. Our four divisions — Electronics, Soap & Cleaning Materials, Real Estate, and Tissue Manufacturing — work together to serve a broad customer base of retail buyers, businesses, and distributors.
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
             We believe in clear pricing, verified documents, on-time delivery, and direct customer communication. Most of our customers reach us on WhatsApp — and we like it that way.
