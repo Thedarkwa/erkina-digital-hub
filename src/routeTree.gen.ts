@@ -13,7 +13,6 @@ import { Route as TissueRouteImport } from './routes/tissue'
 import { Route as SoapRouteImport } from './routes/soap'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as RealEstateRouteImport } from './routes/real-estate'
-import { Route as EventsRouteImport } from './routes/events'
 import { Route as ElectronicsRouteImport } from './routes/electronics'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
@@ -37,11 +36,6 @@ const SearchRoute = SearchRouteImport.update({
 const RealEstateRoute = RealEstateRouteImport.update({
   id: '/real-estate',
   path: '/real-estate',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const EventsRoute = EventsRouteImport.update({
-  id: '/events',
-  path: '/events',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ElectronicsRoute = ElectronicsRouteImport.update({
@@ -70,7 +64,6 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/electronics': typeof ElectronicsRoute
-  '/events': typeof EventsRoute
   '/real-estate': typeof RealEstateRoute
   '/search': typeof SearchRoute
   '/soap': typeof SoapRoute
@@ -81,7 +74,6 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/electronics': typeof ElectronicsRoute
-  '/events': typeof EventsRoute
   '/real-estate': typeof RealEstateRoute
   '/search': typeof SearchRoute
   '/soap': typeof SoapRoute
@@ -93,7 +85,6 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/electronics': typeof ElectronicsRoute
-  '/events': typeof EventsRoute
   '/real-estate': typeof RealEstateRoute
   '/search': typeof SearchRoute
   '/soap': typeof SoapRoute
@@ -106,7 +97,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/electronics'
-    | '/events'
     | '/real-estate'
     | '/search'
     | '/soap'
@@ -117,7 +107,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/electronics'
-    | '/events'
     | '/real-estate'
     | '/search'
     | '/soap'
@@ -128,7 +117,6 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/electronics'
-    | '/events'
     | '/real-estate'
     | '/search'
     | '/soap'
@@ -140,7 +128,6 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   ElectronicsRoute: typeof ElectronicsRoute
-  EventsRoute: typeof EventsRoute
   RealEstateRoute: typeof RealEstateRoute
   SearchRoute: typeof SearchRoute
   SoapRoute: typeof SoapRoute
@@ -175,13 +162,6 @@ declare module '@tanstack/react-router' {
       path: '/real-estate'
       fullPath: '/real-estate'
       preLoaderRoute: typeof RealEstateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/events': {
-      id: '/events'
-      path: '/events'
-      fullPath: '/events'
-      preLoaderRoute: typeof EventsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/electronics': {
@@ -220,7 +200,6 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   ElectronicsRoute: ElectronicsRoute,
-  EventsRoute: EventsRoute,
   RealEstateRoute: RealEstateRoute,
   SearchRoute: SearchRoute,
   SoapRoute: SoapRoute,

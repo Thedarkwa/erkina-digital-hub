@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, MessageCircle, Cpu, FlaskConical, Building2, Scroll, PartyPopper, ShieldCheck, Truck, Award, Headphones } from "lucide-react";
+import { ArrowRight, Cpu, FlaskConical, Building2, Scroll, ShieldCheck, Truck, Award, Headphones } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { ProductCard } from "@/components/ProductCard";
 import heroImg from "@/assets/hero-erkina.jpg";
@@ -7,13 +7,13 @@ import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
 import realEstateImg from "@/assets/real-estate.jpg";
 import tissueImg from "@/assets/tissue.jpg";
-import eventsImg from "@/assets/events.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ERKINA Trading & Events — A Premium Multi-Business Enterprise" },
-      { name: "description", content: "Trading | Real Estate | Tissue Manufacturing | Event Rentals. Serving Ghana since 2019." },
+      { name: "description", content: "Trading | Real Estate | Tissue Manufacturing | Soap & Cleaning. Serving Ghana since 2019." },
       { property: "og:title", content: "ERKINA Trading & Events" },
       { property: "og:image", content: heroImg },
     ],
@@ -26,7 +26,7 @@ const categories = [
   { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: soapImg },
   { to: "/real-estate", title: "Real Estate", desc: "Lands, property management", icon: Building2, image: realEstateImg },
   { to: "/tissue", title: "Tissue & Paper Products", desc: "Toilet rolls & wholesale supply", icon: Scroll, image: tissueImg },
-  { to: "/events", title: "Event Rentals", desc: "Canopies, sound, mist fans", icon: PartyPopper, image: eventsImg },
+  
 ] as const;
 
 function HomePage() {
@@ -51,7 +51,7 @@ function HomePage() {
               ERKINA <span className="text-gold">Trading</span> & Events
             </h1>
             <p className="mt-6 max-w-xl text-lg text-navy-foreground/85 sm:text-xl">
-              Trading · Real Estate · Tissue Manufacturing · Event Rentals
+              Electronics · Soap & Cleaning · Real Estate · Tissue Manufacturing
             </p>
             <p className="mt-3 max-w-xl text-base text-navy-foreground/70">
               A trusted multi-business enterprise delivering quality products, reliable service, and exceptional support across Ghana.
@@ -95,7 +95,7 @@ function HomePage() {
           <div className="max-w-2xl">
             <div className="text-xs uppercase tracking-[0.25em] text-gold">Our Divisions</div>
             <h2 className="mt-3 font-display text-3xl font-bold text-balance sm:text-4xl">
-              Five businesses. One trusted partner.
+              Four businesses. One trusted partner.
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
@@ -142,11 +142,10 @@ function HomePage() {
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
             Popular products & services
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProductCard name="Bluetooth Speaker" price="GHS 850" specs="Heavy bass, 12hr battery" image={electronicsImg} />
             <ProductCard name="SLES 70%" price="Request price" specs="25kg drum, surfactant" image={soapImg} />
             <ProductCard name="Premium Toilet Roll" price="Wholesale only" specs="2-ply, 24 rolls/case" image={tissueImg} />
-            <ProductCard name="Bronze Event Package" price="From GHS 3,500" specs="Canopy, sound, 50 chairs" image={eventsImg} cta="Book on WhatsApp" />
           </div>
         </div>
       </section>
