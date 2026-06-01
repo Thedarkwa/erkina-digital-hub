@@ -51,7 +51,7 @@ function HomePage() {
               ERKINA <span className="text-gold">Trading</span> & Events
             </h1>
             <p className="mt-6 max-w-xl text-lg text-navy-foreground/85 sm:text-xl">
-              Trading · Real Estate · Tissue Manufacturing · Event Rentals
+              Electronics · Soap & Cleaning · Real Estate · Tissue Manufacturing
             </p>
             <p className="mt-3 max-w-xl text-base text-navy-foreground/70">
               A trusted multi-business enterprise delivering quality products, reliable service, and exceptional support across Ghana.
