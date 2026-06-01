@@ -7,7 +7,7 @@ import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
 import realEstateImg from "@/assets/real-estate.jpg";
 import tissueImg from "@/assets/tissue.jpg";
-import eventsImg from "@/assets/events.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
