@@ -45,7 +45,7 @@ function RealEstatePage() {
           {listings.map((l) => (
             <article key={l.title} className="overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all hover:shadow-elegant">
               <div className="aspect-[16/10] overflow-hidden">
-                <img src={realEstateImg} alt={l.title} loading="lazy" className="h-full w-full object-cover" />
+                <img src={l.image} alt={l.title} loading="lazy" className="h-full w-full object-cover" />
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between gap-4">
