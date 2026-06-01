@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "ERKINA Trading & Events — A Premium Multi-Business Enterprise" },
-      { name: "description", content: "Trading | Real Estate | Tissue Manufacturing | Event Rentals. Serving Ghana since 2019." },
+      { name: "description", content: "Trading | Real Estate | Tissue Manufacturing | Soap & Cleaning. Serving Ghana since 2019." },
       { property: "og:title", content: "ERKINA Trading & Events" },
       { property: "og:image", content: heroImg },
     ],
