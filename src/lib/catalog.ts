@@ -34,12 +34,6 @@ export const catalog: CatalogItem[] = [
   // Real Estate
   { id: "land-tema", name: "Land Plot — Tema", category: "Real Estate", price: "Contact agent", specs: "100x100 ft, documents ready", image: realEstateImg, route: "/real-estate" },
   { id: "land-kasoa", name: "Land Plot — Kasoa", category: "Real Estate", price: "Contact agent", specs: "70x100 ft, fenced", image: realEstateImg, route: "/real-estate" },
-
-  // Events
-  { id: "gold-package", name: "Gold Event Package", category: "Event Rentals", price: "From GHS 9,500", specs: "Canopy, sound, mist fan", image: eventsImg, route: "/events" },
-  { id: "silver-package", name: "Silver Event Package", category: "Event Rentals", price: "From GHS 6,000", specs: "Canopy + chairs + sound", image: eventsImg, route: "/events" },
-  { id: "bronze-package", name: "Bronze Event Package", category: "Event Rentals", price: "From GHS 3,500", specs: "Canopy + chairs", image: eventsImg, route: "/events" },
-  { id: "mist-fan", name: "Industrial Mist Fan", category: "Event Rentals", price: "Per day", specs: "Outdoor cooling, large coverage", image: eventsImg, route: "/events" },
 ];
 
 export function searchCatalog(query: string): CatalogItem[] {
