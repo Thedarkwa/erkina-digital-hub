@@ -32,14 +32,15 @@ function RealEstatePage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="Land · Property · Development"
+        eyebrow="Shai Hills · Land · Property"
         title="Real Estate"
-        description="Premium plots and trusted property services. Documents verified. Site visits arranged within 48 hours."
+        description="Premium land plots in Shai Hills. We currently sell in Shai Hills only. Documents verified. Site visits arranged within 48 hours."
       />
 
       {/* Listings */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-        <h2 className="font-display text-3xl font-bold">Available Land Listings</h2>
+        <h2 className="font-display text-3xl font-bold">Available Land Listings — Shai Hills</h2>
+        <p className="mt-2 text-muted-foreground">Full plot: GHS 50,000 · Half plot: GHS 25,000</p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2">
           {listings.map((l) => (
             <article key={l.title} className="overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all hover:shadow-elegant">
