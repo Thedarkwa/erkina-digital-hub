@@ -117,8 +117,8 @@ function RealEstatePage() {
       <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
         <div className="overflow-hidden rounded-2xl border border-border shadow-card">
           <iframe
-            title="ERKINA Office Location"
-            src="https://www.google.com/maps?q=Tema+Community+One,+Ghana&output=embed"
+            title="Shai Hills Location"
+            src="https://www.google.com/maps?q=Shai+Hills,+Ghana&output=embed"
             className="h-[400px] w-full border-0"
             loading="lazy"
           />
