@@ -10,7 +10,7 @@ const nav = [
   { to: "/soap", label: "Soap & Cleaning", category: "Soap & Cleaning" as const },
   { to: "/real-estate", label: "Real Estate", category: "Real Estate" as const },
   { to: "/tissue", label: "Tissue & Paper", category: "Tissue & Paper" as const },
-  { to: "/events", label: "Event Rentals", category: "Event Rentals" as const },
+  
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
