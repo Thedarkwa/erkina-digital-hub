@@ -2,24 +2,30 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHero } from "@/components/PageShell";
 import { MapPin, Ruler, FileCheck, Quote } from "lucide-react";
 import realEstateImg from "@/assets/real-estate.jpg";
+import shai1 from "@/assets/shai-hills-1.jpg.asset.json";
+import shai2 from "@/assets/shai-hills-2.jpg.asset.json";
+import shai3 from "@/assets/shai-hills-3.jpg.asset.json";
+import shai4 from "@/assets/shai-hills-4.jpg.asset.json";
+import shai5 from "@/assets/shai-hills-5.jpg.asset.json";
 
 export const Route = createFileRoute("/real-estate")({
   head: () => ({
     meta: [
-      { title: "Real Estate — Lands & Property Management | ERKINA" },
-      { name: "description", content: "Premium land plots, property management & development services across Ghana." },
+      { title: "Real Estate — Shai Hills Land Plots | ERKINA" },
+      { name: "description", content: "Premium land plots in Shai Hills, Ghana. Full plots from GHS 50,000, half plots from GHS 25,000." },
       { property: "og:title", content: "Real Estate — ERKINA" },
-      { property: "og:image", content: realEstateImg },
+      { property: "og:image", content: shai1.url },
     ],
   }),
   component: RealEstatePage,
 });
 
 const listings = [
-  { title: "Tema Community 25", size: "100 x 80 ft", location: "Tema, Greater Accra", price: "GHS 380,000", docs: "Indenture, Site Plan, Allocation" },
-  { title: "Kasoa Akweley", size: "70 x 100 ft", location: "Central Region", price: "GHS 145,000", docs: "Indenture, Site Plan" },
-  { title: "Prampram Beach Plot", size: "80 x 100 ft", location: "Greater Accra", price: "GHS 220,000", docs: "Land Title, Site Plan" },
-  { title: "Oyibi Estate", size: "100 x 100 ft", location: "Greater Accra", price: "GHS 95,000", docs: "Indenture, Site Plan" },
+  { title: "Shai Hills — Full Plot", size: "70 x 100 ft", location: "Shai Hills, Greater Accra", price: "GHS 50,000", docs: "Indenture, Site Plan, Allocation", image: shai1.url },
+  { title: "Shai Hills — Half Plot", size: "70 x 50 ft", location: "Shai Hills, Greater Accra", price: "GHS 25,000", docs: "Indenture, Site Plan", image: shai2.url },
+  { title: "Shai Hills — Full Plot (Demarcated)", size: "70 x 100 ft", location: "Shai Hills, Greater Accra", price: "GHS 50,000", docs: "Indenture, Site Plan, Allocation", image: shai3.url },
+  { title: "Shai Hills — Half Plot (Developing Area)", size: "70 x 50 ft", location: "Shai Hills, Greater Accra", price: "GHS 25,000", docs: "Indenture, Site Plan", image: shai4.url },
+  { title: "Shai Hills — Full Plot (Near Development)", size: "70 x 100 ft", location: "Shai Hills, Greater Accra", price: "GHS 50,000", docs: "Indenture, Site Plan, Allocation", image: shai5.url },
 ];
 
 function RealEstatePage() {
