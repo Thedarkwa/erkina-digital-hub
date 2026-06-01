@@ -142,11 +142,10 @@ function HomePage() {
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
             Popular products & services
           </h2>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProductCard name="Bluetooth Speaker" price="GHS 850" specs="Heavy bass, 12hr battery" image={electronicsImg} />
             <ProductCard name="SLES 70%" price="Request price" specs="25kg drum, surfactant" image={soapImg} />
             <ProductCard name="Premium Toilet Roll" price="Wholesale only" specs="2-ply, 24 rolls/case" image={tissueImg} />
-            <ProductCard name="Bronze Event Package" price="From GHS 3,500" specs="Canopy, sound, 50 chairs" image={eventsImg} cta="Book on WhatsApp" />
           </div>
         </div>
       </section>
