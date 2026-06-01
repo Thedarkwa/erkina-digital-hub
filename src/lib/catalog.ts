@@ -2,12 +2,11 @@ import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
 import tissueImg from "@/assets/tissue.jpg";
 import realEstateImg from "@/assets/real-estate.jpg";
-import eventsImg from "@/assets/events.jpg";
 
 export type CatalogItem = {
   id: string;
   name: string;
-  category: "Electronics" | "Soap & Cleaning" | "Tissue & Paper" | "Real Estate" | "Event Rentals";
+  category: "Electronics" | "Soap & Cleaning" | "Tissue & Paper" | "Real Estate";
   price: string;
   specs: string;
   image: string;
