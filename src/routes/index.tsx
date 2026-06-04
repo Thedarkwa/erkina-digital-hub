@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Cpu, FlaskConical, Building2, Scroll, ShieldCheck, Truck, Award, Headphones } from "lucide-react";
+import { ArrowRight, Cpu, FlaskConical, Building2, Scroll, ShieldCheck, Truck, Award, Headphones, MapPin } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { ProductCard } from "@/components/ProductCard";
 import heroImg from "@/assets/hero-erkina.jpg";
 import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
-import shaiHillsImg from "@/assets/shai-hills-1.jpg.asset.json";
+import shai1 from "@/assets/shai-hills-1.jpg.asset.json";
+import shai2 from "@/assets/shai-hills-2.jpg.asset.json";
+import shai3 from "@/assets/shai-hills-3.jpg.asset.json";
+import shai4 from "@/assets/shai-hills-4.jpg.asset.json";
 import tissueImg from "@/assets/tissue.jpg";
 
 
@@ -21,13 +24,24 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const categories = [
+const shaiGallery = [shai1.url, shai2.url, shai3.url, shai4.url];
+
+type Category = {
+  to: string;
+  title: string;
+  desc: string;
+  icon: typeof Cpu;
+  image: string;
+  gallery?: string[];
+  location?: string;
+};
+
+const categories: Category[] = [
   { to: "/electronics", title: "Electronics & Gadgets", desc: "Speakers, tablets, fans, CCTV", icon: Cpu, image: electronicsImg },
   { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: soapImg },
-  { to: "/real-estate", title: "Real Estate", desc: "Lands in Shai Hills — verified plots", icon: Building2, image: shaiHillsImg.url },
+  { to: "/real-estate", title: "Real Estate", desc: "Lands in Shai Hills — verified plots", icon: Building2, image: shai1.url, gallery: shaiGallery, location: "Shai Hills, Greater Accra" },
   { to: "/tissue", title: "Tissue & Paper Products", desc: "Toilet rolls & wholesale supply", icon: Scroll, image: tissueImg },
-  
-] as const;
+];
 
 function HomePage() {
   return (
@@ -110,13 +124,34 @@ function HomePage() {
               to={c.to}
               className="group relative overflow-hidden rounded-2xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={c.image}
                   alt={c.title}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                {c.gallery && (
+                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                    <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-1 bg-background/40 p-1">
+                      {c.gallery.slice(0, 4).map((src, i) => (
+                        <img
+                          key={i}
+                          src={src}
+                          alt=""
+                          loading="lazy"
+                          className="h-full w-full rounded-md object-cover"
+                        />
+                      ))}
+                    </div>
+                    {c.location && (
+                      <div className="absolute bottom-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-navy/90 px-3 py-1.5 text-xs font-semibold text-navy-foreground shadow-md">
+                        <MapPin className="h-3.5 w-3.5 text-gold" />
+                        {c.location}
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
               <div className="p-6">
                 <div className="flex items-center gap-3">
