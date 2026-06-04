@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
 const categories = [
   { to: "/electronics", title: "Electronics & Gadgets", desc: "Speakers, tablets, fans, CCTV", icon: Cpu, image: electronicsImg },
   { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: soapImg },
-  { to: "/real-estate", title: "Real Estate", desc: "Lands, property management", icon: Building2, image: realEstateImg },
+  { to: "/real-estate", title: "Real Estate", desc: "Lands in Shai Hills — verified plots", icon: Building2, image: shaiHillsImg.url },
   { to: "/tissue", title: "Tissue & Paper Products", desc: "Toilet rolls & wholesale supply", icon: Scroll, image: tissueImg },
   
 ] as const;
