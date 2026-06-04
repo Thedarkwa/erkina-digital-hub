@@ -32,9 +32,9 @@ export const catalog: CatalogItem[] = [
   { id: "kitchen-towel", name: "Kitchen Paper Towel", category: "Tissue & Paper", price: "Wholesale only", specs: "Absorbent, 12 rolls/case", image: tissueImg, route: "/tissue" },
   { id: "serviette", name: "Dinner Serviette", category: "Tissue & Paper", price: "Wholesale only", specs: "Soft, 100 sheets/pack", image: tissueImg, route: "/tissue" },
 
-  // Real Estate
-  { id: "land-tema", name: "Land Plot — Tema", category: "Real Estate", price: "Contact agent", specs: "100x100 ft, documents ready", image: realEstateImg, route: "/real-estate" },
-  { id: "land-kasoa", name: "Land Plot — Kasoa", category: "Real Estate", price: "Contact agent", specs: "70x100 ft, fenced", image: realEstateImg, route: "/real-estate" },
+  // Real Estate — Shai Hills only
+  { id: "shai-full-plot", name: "Full Plot — Shai Hills", category: "Real Estate", price: "GHS 50,000", specs: "70x100 ft · Shai Hills, Greater Accra", image: shai1.url, route: "/real-estate" },
+  { id: "shai-half-plot", name: "Half Plot — Shai Hills", category: "Real Estate", price: "GHS 25,000", specs: "70x50 ft · Shai Hills, Greater Accra", image: shai2.url, route: "/real-estate" },
 ];
 
 export function searchCatalog(query: string): CatalogItem[] {
