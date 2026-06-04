@@ -1,11 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Cpu, FlaskConical, Building2, Scroll, ShieldCheck, Truck, Award, Headphones } from "lucide-react";
+import { ArrowRight, Cpu, FlaskConical, Building2, Scroll, ShieldCheck, Truck, Award, Headphones, MapPin } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { ProductCard } from "@/components/ProductCard";
 import heroImg from "@/assets/hero-erkina.jpg";
 import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
-import shaiHillsImg from "@/assets/shai-hills-1.jpg.asset.json";
+import shai1 from "@/assets/shai-hills-1.jpg.asset.json";
+import shai2 from "@/assets/shai-hills-2.jpg.asset.json";
+import shai3 from "@/assets/shai-hills-3.jpg.asset.json";
+import shai4 from "@/assets/shai-hills-4.jpg.asset.json";
 import tissueImg from "@/assets/tissue.jpg";
 
 
@@ -21,13 +24,24 @@ export const Route = createFileRoute("/")({
   component: HomePage,
 });
 
-const categories = [
+const shaiGallery = [shai1.url, shai2.url, shai3.url, shai4.url];
+
+type Category = {
+  to: string;
+  title: string;
+  desc: string;
+  icon: typeof Cpu;
+  image: string;
+  gallery?: string[];
+  location?: string;
+};
+
+const categories: Category[] = [
   { to: "/electronics", title: "Electronics & Gadgets", desc: "Speakers, tablets, fans, CCTV", icon: Cpu, image: electronicsImg },
   { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: soapImg },
-  { to: "/real-estate", title: "Real Estate", desc: "Lands in Shai Hills — verified plots", icon: Building2, image: shaiHillsImg.url },
+  { to: "/real-estate", title: "Real Estate", desc: "Lands in Shai Hills — verified plots", icon: Building2, image: shai1.url, gallery: shaiGallery, location: "Shai Hills, Greater Accra" },
   { to: "/tissue", title: "Tissue & Paper Products", desc: "Toilet rolls & wholesale supply", icon: Scroll, image: tissueImg },
-  
-] as const;
+];
 
 function HomePage() {
   return (
