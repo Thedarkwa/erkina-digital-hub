@@ -1,7 +1,8 @@
 import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
 import tissueImg from "@/assets/tissue.jpg";
-import realEstateImg from "@/assets/real-estate.jpg";
+import shai1 from "@/assets/shai-hills-1.jpg.asset.json";
+import shai2 from "@/assets/shai-hills-2.jpg.asset.json";
 
 export type CatalogItem = {
   id: string;
