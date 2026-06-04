@@ -5,7 +5,7 @@ import { ProductCard } from "@/components/ProductCard";
 import heroImg from "@/assets/hero-erkina.jpg";
 import electronicsImg from "@/assets/electronics.jpg";
 import soapImg from "@/assets/soap.jpg";
-import realEstateImg from "@/assets/real-estate.jpg";
+import shaiHillsImg from "@/assets/shai-hills-1.jpg.asset.json";
 import tissueImg from "@/assets/tissue.jpg";
 
 
