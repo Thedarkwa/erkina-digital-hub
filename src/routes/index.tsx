@@ -38,7 +38,7 @@ type Category = {
 
 const categories: Category[] = [
   { to: "/electronics", title: "Electronics & Gadgets", desc: "Speakers, tablets, fans, CCTV", icon: Cpu, image: electronicsImg },
-  { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: soapImg },
+  { to: "/soap", title: "Cleaning & Soap Ingredients", desc: "SLES, CDEA, STPP, HPMC & more", icon: FlaskConical, image: slesImg.url },
   { to: "/real-estate", title: "Real Estate", desc: "Lands in Shai Hills — verified plots", icon: Building2, image: shai1.url, gallery: shaiGallery, location: "Shai Hills, Greater Accra" },
   { to: "/tissue", title: "Tissue & Paper Products", desc: "Toilet rolls & wholesale supply", icon: Scroll, image: tissueImg },
 ];
@@ -179,7 +179,7 @@ function HomePage() {
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             <ProductCard name="Bluetooth Speaker" price="GHS 850" specs="Heavy bass, 12hr battery" image={electronicsImg} />
-            <ProductCard name="SLES 70%" price="Request price" specs="25kg drum, surfactant" image={soapImg} />
+            <ProductCard name="SLES 70%" price="Request price" specs="25kg drum, surfactant" image={slesImg.url} />
             <ProductCard name="Premium Toilet Roll" price="Wholesale only" specs="2-ply, 24 rolls/case" image={tissueImg} />
           </div>
         </div>
