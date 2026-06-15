@@ -70,7 +70,7 @@ function SoapPage() {
               name={p.name}
               specs={p.specs}
               price="Request Price"
-              image={soapImg}
+              image={p.image}
               cta="Request on WhatsApp"
             />
           ))}
