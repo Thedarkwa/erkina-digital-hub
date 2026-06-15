@@ -4,7 +4,7 @@ import { PageShell } from "@/components/PageShell";
 import { ProductCard } from "@/components/ProductCard";
 import heroImg from "@/assets/hero-erkina.jpg";
 import electronicsImg from "@/assets/electronics.jpg";
-import soapImg from "@/assets/soap.jpg";
+import slesImg from "@/assets/sles.jpg.asset.json";
 import shai1 from "@/assets/shai-hills-1.jpg.asset.json";
 import shai2 from "@/assets/shai-hills-2.jpg.asset.json";
 import shai3 from "@/assets/shai-hills-3.jpg.asset.json";
