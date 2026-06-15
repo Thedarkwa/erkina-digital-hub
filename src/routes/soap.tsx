@@ -3,28 +3,35 @@ import { PageShell, PageHero } from "@/components/PageShell";
 import { ProductCard } from "@/components/ProductCard";
 import { FlaskConical, Beaker, Droplets } from "lucide-react";
 import soapImg from "@/assets/soap.jpg";
+import slesImg from "@/assets/sles.jpg.asset.json";
+import causticImg from "@/assets/caustic-soda.jpg.asset.json";
+import sulphonicImg from "@/assets/sulphonic-acid.jpg.asset.json";
+import boosterImg from "@/assets/booster-liquid.jpg.asset.json";
+import liquidSoapImg from "@/assets/liquid-soap.jpg";
+import stppImg from "@/assets/stpp-powder.jpg";
+import soapColorImg from "@/assets/soap-color.jpg";
 
 export const Route = createFileRoute("/soap")({
   head: () => ({
     meta: [
       { title: "Soap & Cleaning Raw Materials — ERKINA" },
-      { name: "description", content: "Wholesale supply of SLES, CDEA, STPP, HPMC, CMC, Cocamidopropyl Betaine and more." },
+      { name: "description", content: "Wholesale supply of SLES, Caustic Soda, Sulphonic Acid, Booster, STPP, CDEA and more." },
       { property: "og:title", content: "Soap & Cleaning Raw Materials — ERKINA" },
-      { property: "og:image", content: soapImg },
+      { property: "og:image", content: slesImg.url },
     ],
   }),
   component: SoapPage,
 });
 
 const products = [
-  { name: "SLES 70%", specs: "Sodium Laureth Sulfate · 25kg, 1kg, 100g" },
-  { name: "Cocamidopropyl Betaine", specs: "Mild surfactant · 25kg, 5kg" },
-  { name: "CDEA", specs: "Coconut Diethanolamide · 25kg, 1kg" },
-  { name: "STPP", specs: "Sodium Tripolyphosphate · 25kg, 5kg" },
-  { name: "HPMC", specs: "Hydroxypropyl Methylcellulose · 25kg, 1kg" },
-  { name: "CMC", specs: "Carboxymethyl Cellulose · 25kg, 1kg" },
-  { name: "Caustic Soda", specs: "Industrial grade · 25kg" },
-  { name: "Liquid Soap Color", specs: "Concentrated · 1kg, 100g" },
+  { name: "SLES 70%", specs: "Sodium Lauryl Sulfate · 25kg, 1kg, 100g", image: slesImg.url },
+  { name: "Caustic Soda Pearls", specs: "99% purity · 25kg, retail packs", image: causticImg.url },
+  { name: "Sulphonic Acid", specs: "Industrial grade · 5L, 1.5L, 500ml, 250ml", image: sulphonicImg.url },
+  { name: "Booster Liquid", specs: "Foam booster · 5L, 1.5L, 500ml, 250ml", image: boosterImg.url },
+  { name: "Liquid Soap", specs: "Ready-to-use · 500ml, 1L", image: liquidSoapImg },
+  { name: "STPP", specs: "Sodium Tripolyphosphate · 25kg, 5kg", image: stppImg },
+  { name: "Cocamidopropyl Betaine", specs: "Mild surfactant · 25kg, 5kg", image: slesImg.url },
+  { name: "Liquid Soap Color", specs: "Concentrated · 1kg, 100g", image: soapColorImg },
 ];
 
 function SoapPage() {
